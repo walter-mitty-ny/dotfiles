@@ -1,0 +1,31 @@
+[user]
+	email = walter.mitty@tuta.io
+	name = Walter Mitty
+
+[alias]
+	st = status --short
+	ds = diff --stat
+
+[push]
+	default = simple
+
+[color]
+	ui = auto
+
+[diff]
+	tool = kdiff3
+
+[difftool]
+	prompt = false
+
+[merge]
+	tool = kdiff3
+
+[mergetool]
+	keepBackup = false
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
