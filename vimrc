@@ -54,7 +54,7 @@ set ruler                       " show the cursor position all the time
 set showcmd                     " display incomplete commands
 set smartindent                 " smart autoindenting when starting a new line
 set tabstop=8                   " number of spaces that a <Tab> counts for
-set termguicolors               " Enable true color support on the terminal
+set termguicolors               " enable true color support on the terminal
 set wildignore=*.bak,*.o,*.e,*~ " wildmenu: ignore these extensions
 set wildmenu                    " command-line completion in an enhanced mode
 set wrap                        " wrap lines
@@ -84,7 +84,7 @@ Plug 'mhinz/vim-signify'
 Plug 'Valloric/YouCompleteMe'
 "
 " fzf
-Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install -all'}
+Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
 Plug 'junegunn/fzf.vim'
 let g:fzf_launcher = 'xterm -bg black -geometry 120x30 -e sh -c %s'
 noremap <leader>s :FZF<CR>
@@ -104,7 +104,7 @@ Plug 'NLKNguyen/papercolor-theme'
 " copilot
 Plug 'github/copilot.vim'
 "
-" chatgpt
+" ai
 Plug 'madox2/vim-ai'
 let g:vim_ai_roles_config_file = '~/.vim/roles.ini'
 "
@@ -112,9 +112,9 @@ let g:vim_ai_roles_config_file = '~/.vim/roles.ini'
 " initialize plugin system
 call plug#end()
 "===============================================================================
-" Misc
+" Miscellaneous settings
 "===============================================================================
-" Must be set after plugin and since PaperColor is a plugin...
+" must be set after plugins and since PaperColor is a plugin...
 set background=dark
 colorscheme PaperColor
 " completion stuff
